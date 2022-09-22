@@ -5,7 +5,8 @@ import Banner from './Banner';
 import Engineers from './Engineers';
 import Listen from './Listen';
 import Contact from './Contact';
-import Booking from './Booking';
+import AboutCard from './AboutCard';
+import About from './About';
 
 
 
@@ -16,22 +17,24 @@ function Home() {
     
     <HomeContainer >
         <SeperatorHome id='home'/>
+            <AboutCard />
             <Banner />
+            <About />
         <Seperator id='services'/>
         <ContainerName >services</ContainerName>
             <Services />
         <Seperator id='engineers'/>
         <ContainerName>engineers</ContainerName>
             <Engineers />
-        <Seperator id='listen'/>
+        <Seperator id='listen'/>   
         <ContainerName>listen</ContainerName>
-            <Listen />
+            {/* <Listen /> */}
         <Seperator id='contact'/>
         <ContainerName>contact</ContainerName>
             <Contact />
-        <Seperator id='book' />
+        {/* <Seperator id='book' />
         <ContainerName>book</ContainerName>
-            <Booking />
+            <Booking /> */}
     </HomeContainer>
   )
 }
