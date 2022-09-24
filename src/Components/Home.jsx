@@ -1,9 +1,9 @@
 import React from 'react'
-import { ContainerName, HomeContainer, Seperator, SeperatorHome } from '../Styles/Home.style'
+import { BookButton, BookContainer, ContainerName, HomeContainer, Seperator, SeperatorHome } from '../Styles/Home.style'
 import Services from './Services';
 import Banner from './Banner';
 import Engineers from './Engineers';
-import Listen from './Listen';
+// import Listen from './Listen';
 import Contact from './Contact';
 import AboutCard from './AboutCard';
 import About from './About';
@@ -20,15 +20,16 @@ function Home() {
             <AboutCard />
             <Banner />
             <About />
+            <BookContainer><a href='https://stonetreebooking.square.site' target='_blank' rel="noreferrer" ><BookButton>book now</BookButton></a></BookContainer>
         <Seperator id='services'/>
         <ContainerName >services</ContainerName>
             <Services />
         <Seperator id='engineers'/>
         <ContainerName>engineers</ContainerName>
             <Engineers />
-        <Seperator id='listen'/>   
+        {/* <Seperator id='listen'/>   
         <ContainerName>listen</ContainerName>
-            {/* <Listen /> */}
+            <Listen /> */}
         <Seperator id='contact'/>
         <ContainerName>contact</ContainerName>
             <Contact />

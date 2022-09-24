@@ -11,6 +11,7 @@ import StudioA2 from '../assets/Studio A/StudioA2.JPG'
 
 
 
+
 function Services() {
 
   const [openRehearsal, setOpenRehearsal] = useState(false)
@@ -41,6 +42,53 @@ function Services() {
     <ServiceContainer
       ref={ref}
     >
+      <ServiceCard
+        as={motion.div}
+        whileHover={{ scale: 1.1 }}
+        animate={animation}
+      >
+        <ServiceImg src={StudioA} />
+        <ServiceTitle>studio recording</ServiceTitle>
+        <ServiceDescription>$50/hr</ServiceDescription>
+        <ServiceButton
+          onClick={() => {
+            setOpenStudioRecording((curr) => !curr);
+          }}
+        >
+          more info
+        </ServiceButton>
+      </ServiceCard>
+      {openStudioRecording && (
+          <ServiceExpanded as={motion.div}
+            initial={{ opacity:0 }}
+            animate={{ opacity:1 }}
+            transition={{ ease: "easeOut", duration: 1 }}
+          >
+            <Exit 
+              onClick={() => {
+              setOpenStudioRecording((curr) => !curr);
+              }} 
+            >
+              &#10005;
+            </Exit>
+            <ServiceExpandedContainer>
+              <ServiceExpandedLeft>
+                <ServiceImgExpanded src={StudioA} />
+                <ServiceImgExpanded src={StudioA2} />
+              </ServiceExpandedLeft>
+              <ServiceExpandedRight>
+            <ServiceTitleExpanded>studio recording</ServiceTitleExpanded>
+            <ServiceInfoExpanded>
+              get your songs professionally <br />
+              tracked/mixed/mastered <br />
+              by our top of the line engineers <br />
+              choose either studio a or studio b <br />
+              at only $50/hr
+            </ServiceInfoExpanded>
+            </ServiceExpandedRight>
+            </ServiceExpandedContainer>
+          </ServiceExpanded>
+        )}
       <ServiceCard
         as={motion.div}
         whileHover={{ scale: 1.1 }}
@@ -91,55 +139,6 @@ function Services() {
             </ServiceExpandedContainer>
           </ServiceExpanded>
         )}
-
-      <ServiceCard
-        as={motion.div}
-        whileHover={{ scale: 1.1 }}
-        animate={animation}
-      >
-        <ServiceImg src={StudioA} />
-        <ServiceTitle>studio recording</ServiceTitle>
-        <ServiceDescription>$50/hr</ServiceDescription>
-        <ServiceButton
-          onClick={() => {
-            setOpenStudioRecording((curr) => !curr);
-          }}
-        >
-          more info
-        </ServiceButton>
-      </ServiceCard>
-      {openStudioRecording && (
-          <ServiceExpanded as={motion.div}
-            initial={{ opacity:0 }}
-            animate={{ opacity:1 }}
-            transition={{ ease: "easeOut", duration: 1 }}
-          >
-            <Exit 
-              onClick={() => {
-              setOpenStudioRecording((curr) => !curr);
-              }} 
-            >
-              &#10005;
-            </Exit>
-            <ServiceExpandedContainer>
-              <ServiceExpandedLeft>
-                <ServiceImgExpanded src={StudioA} />
-                <ServiceImgExpanded src={StudioA2} />
-              </ServiceExpandedLeft>
-              <ServiceExpandedRight>
-            <ServiceTitleExpanded>studio recording</ServiceTitleExpanded>
-            <ServiceInfoExpanded>
-              get your songs professionally <br />
-              tracked/mixed/mastered <br />
-              by our top of the line engineers <br />
-              choose either studio a or studio b <br />
-              at only $50/hr
-            </ServiceInfoExpanded>
-            </ServiceExpandedRight>
-            </ServiceExpandedContainer>
-          </ServiceExpanded>
-        )}
-      
       <ServiceCard
         as={motion.div}
         whileHover={{ scale: 1.1 }}

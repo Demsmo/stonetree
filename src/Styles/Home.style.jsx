@@ -42,5 +42,21 @@ export const Scroll = styled.link`
     
 `
 
+export const BookContainer = styled.div`
+    z-index: 10;
+    position: fixed;
+    bottom: 100px;
+`
 
+export const BookButton = styled.button`
+    border: 2px solid white;
+    padding: 10px;
+    border-radius: 50px;
+    font-size: 30px;
+    z-index: 10;
+    
+    @media (max-width: 955px) {
+        font-size: 20px;
+    }
+`
 

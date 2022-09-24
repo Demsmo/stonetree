@@ -1,7 +1,6 @@
 import React from 'react'
 import { Info, Logo, CardContainer, Slogan, SocialContainer, SocialHolder, InnerContainer } from '../Styles/AboutCard.style'
 import { Facebook, Instagram } from 'react-feather'
-
 import { motion } from 'framer-motion'
 import LogoImg from '../assets/logo.png';
 
@@ -27,6 +26,7 @@ function AboutCard() {
             </SocialContainer>
             {/* <A href='https://the-concept.herokuapp.com/' target='_blank`' rel='noreferrer' ><Concept src={ConceptImg} /></A> */}
         </InnerContainer>
+        
     </CardContainer>
   )
 }

@@ -81,3 +81,4 @@ export const SocialContainer = styled.div`
 export const SocialHolder = styled.div`
     margin: 15px;
 `
+

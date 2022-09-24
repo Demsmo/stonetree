@@ -104,6 +104,7 @@ export const ServiceTitleExpanded = styled.h1`
 export const ServiceInfoExpanded = styled.h1`
     color: white;
     font-size: 35px;
+    margin: 15px;
 
     @media (max-width: 955px) {
         font-size: 20px;
