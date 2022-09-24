@@ -5,7 +5,7 @@ import { FooterContainer, Logo } from '../Styles/Footer.style'
 function Footer() {
   return (
     <FooterContainer>
-      <a href='https://the-concept.herokuapp.com/' target='_blank' rel="noreferrer" ><Logo src={Concept} >
+      <a href='https://www.thetrianglethetreethefishandtheelephant.com/' target='_blank' rel="noreferrer" ><Logo src={Concept} >
       </Logo></a>
     </FooterContainer>
   )
