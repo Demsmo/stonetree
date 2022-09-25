@@ -130,7 +130,7 @@ function Engineers() {
                 In all aspects of his work, it is Turner’s passion, creativity, <br />
                 and ear for industry standard quality that set him apart.
               </EngineerExtendedDescription>
-              <a href='https://open.spotify.com/artist/1rTHxqQScSwNicdYSOWafz' target="_blank" rel="noreferrer" ><EngineerButton>listen on spotify</EngineerButton></a>
+              <a href='https://open.spotify.com/playlist/1lHgXnO2vemQFmBYQmzGjk?si=OrhH3TngS92cM3bG8jBZ0Q&nd=1' target="_blank" rel="noreferrer" ><EngineerButton>listen on spotify</EngineerButton></a>
             </EngineerExtendedRight>
           </EngineerExtendedInnerContainer>
         </EngineerExtendedContainer>
