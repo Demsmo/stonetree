@@ -130,6 +130,7 @@ function Engineers() {
                 In all aspects of his work, it is Turner’s passion, creativity, <br />
                 and ear for industry standard quality that set him apart.
               </EngineerExtendedDescription>
+              <a href='https://open.spotify.com/artist/1rTHxqQScSwNicdYSOWafz' target="_blank" rel="noreferrer" ><EngineerButton>listen on spotify</EngineerButton></a>
             </EngineerExtendedRight>
           </EngineerExtendedInnerContainer>
         </EngineerExtendedContainer>
@@ -184,6 +185,7 @@ function Engineers() {
                 relying on his turn-table and ever growing collection of vinyl allows him to continue to grow in a <br />
                 unique and original way as an artist and musician.
               </EngineerExtendedDescription>
+              <a href='https://open.spotify.com/artist/6KJFzBeIB6WKEmK7uH7zXS?si=iG2I_VuOSPyNeLJeJn2R6g' target="_blank" rel="noreferrer" ><EngineerButton>listen on spotify</EngineerButton></a>
             </EngineerExtendedRight>
           </EngineerExtendedInnerContainer>
         </EngineerExtendedContainer>
@@ -231,6 +233,7 @@ function Engineers() {
                 I my self am an artist and understand the importance of sounding your best. <br />
                 If you have any other questions just hit me up! Look forward to working with you!
               </EngineerExtendedDescription>
+              <a href='https://open.spotify.com/artist/1cJFQQBpqiVwgwyltMYKJx' target="_blank" rel="noreferrer" ><EngineerButton>listen on spotify</EngineerButton></a>
             </EngineerExtendedRight>
           </EngineerExtendedInnerContainer>
         </EngineerExtendedContainer>
