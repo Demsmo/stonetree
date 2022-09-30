@@ -29,7 +29,7 @@ function Banner() {
   return (
     <BannerContainer >
         <VideoContainer ref={ref} >
-            <Video as={motion.video} animate={animation} src={VideoMov} autoPlay loop muted />
+            <Video as={motion.video} animate={animation} src={VideoMov} autoPlay loop muted playsInline />
         </VideoContainer >
         
     </BannerContainer>
