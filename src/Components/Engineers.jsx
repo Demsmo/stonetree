@@ -6,6 +6,7 @@ import Ques from '../assets/Engineers/ques.jpg'
 import Turner from '../assets/Engineers/Turner.png'
 import Casper from '../assets/Engineers/Casper.jpg'
 import Young from '../assets/Engineers/Young.jpg'
+import Bayem from '../assets/Engineers/Bayem.jpeg'
 import { useState } from 'react'
 
 function Engineers() {
@@ -14,6 +15,7 @@ function Engineers() {
   const [openTurner, setOpenTurner] = useState(false)
   const [openCasper, setOpenCasper] = useState(false)
   const [openYoung, setOpenYoung] = useState(false)
+  const [openBayem, setOpenBayem] = useState(false)
 
   const { ref, inView } = useInView({
     threshold: 0.3
@@ -234,6 +236,54 @@ function Engineers() {
                 If you have any other questions just hit me up! Look forward to working with you!
               </EngineerExtendedDescription>
               <a href='https://open.spotify.com/artist/1cJFQQBpqiVwgwyltMYKJx' target="_blank" rel="noreferrer" ><EngineerButton>listen on spotify</EngineerButton></a>
+            </EngineerExtendedRight>
+          </EngineerExtendedInnerContainer>
+        </EngineerExtendedContainer>
+      )}
+
+      {/* BAYEM ENGINEER CARD */}
+      <EngineerCard
+        as={motion.div}
+        whileHover={{ scale: 1.1 }}
+        animate={animation}
+      >
+        <EngineerImg src={Bayem} />
+        <EngineerTitle>Bayem</EngineerTitle>
+        <EngineerDescription>Pop, Acoustic, Rap</EngineerDescription>
+        <EngineerButton
+          onClick={() => {
+            setOpenBayem((curr) => !curr);
+          }}
+        >more info</EngineerButton>
+      </EngineerCard>
+      {openBayem && (
+        <EngineerExtendedContainer
+          as={motion.div}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ ease: "easeOut", duration: 1 }}
+        >
+          <Exit
+            onClick={() => {
+              setOpenBayem((curr) => !curr);
+            }}
+          >
+            &#10005;
+          </Exit>
+          <EngineerExtendedInnerContainer>
+            <EngineerExtendedLeft>
+              <EngineerExtendedImg src={Bayem} />
+            </EngineerExtendedLeft>
+            <EngineerExtendedRight>
+              <EngineerExtendedTitle>Bayem</EngineerExtendedTitle>
+              <EngineerExtendedDescription>
+              Bayem is an Artist, Producer, and Engineer from Indianapolis. <br />
+              He has had his music featured in multiple forms of media, <br /> 
+              most notably "The Kardashians" reality show. <br /> 
+              Specializing in Pop, Bayem is excited to help artists <br /> 
+              realize the vision they have for their artistry.
+              </EngineerExtendedDescription>
+              <a href='https://open.spotify.com/artist/0Y09Z27exTJm2bAchmRoum?si=4gQNHPR-QqidKjxmsZ2qWg' target="_blank" rel="noreferrer" ><EngineerButton>listen on spotify</EngineerButton></a>
             </EngineerExtendedRight>
           </EngineerExtendedInnerContainer>
         </EngineerExtendedContainer>
