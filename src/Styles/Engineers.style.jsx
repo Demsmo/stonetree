@@ -54,6 +54,19 @@ export const EngineerButton = styled.button`
     }
 `
 
+export const SpotifyButton = styled.button`
+    border: 2px solid white;
+    padding: 10px;
+    margin: 25px;
+    border-radius: 50px;
+    font-size: 30px;
+
+    @media (max-width: 955px) {
+        font-size: 20px;
+        width: 60%;
+    }
+`
+
 export const EngineerExtendedContainer = styled.div`
     display: flex;
     position: fixed;
