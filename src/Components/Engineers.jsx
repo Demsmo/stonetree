@@ -193,53 +193,7 @@ function Engineers() {
         </EngineerExtendedContainer>
       )}
 
-      {/* YOUNG ENGINEER CARD */}
-      <EngineerCard
-        as={motion.div}
-        whileHover={{ scale: 1.1 }}
-        animate={animation}
-      >
-        <EngineerImg src={Young} />
-        <EngineerTitle>Young</EngineerTitle>
-        <EngineerDescription>Hip-Hop, Rap</EngineerDescription>
-        <EngineerButton
-          onClick={() => {
-            setOpenYoung((curr) => !curr);
-          }}
-        >more info</EngineerButton>
-      </EngineerCard>
-      {openYoung && (
-        <EngineerExtendedContainer
-          as={motion.div}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ ease: "easeOut", duration: 1 }}
-        >
-          <Exit
-            onClick={() => {
-              setOpenYoung((curr) => !curr);
-            }}
-          >
-            &#10005;
-          </Exit>
-          <EngineerExtendedInnerContainer>
-            <EngineerExtendedLeft>
-              <EngineerExtendedImg src={Young} />
-            </EngineerExtendedLeft>
-            <EngineerExtendedRight>
-              <EngineerExtendedTitle>Young</EngineerExtendedTitle>
-              <EngineerExtendedDescription>
-                My name is Young I have been engineering music for two years. <br />
-                I record with protools I am proficient with autotune. <br />
-                I have recorded all genres of music. <br />
-                I my self am an artist and understand the importance of sounding your best. <br />
-                If you have any other questions just hit me up! Look forward to working with you!
-              </EngineerExtendedDescription>
-              <a href='https://open.spotify.com/artist/1cJFQQBpqiVwgwyltMYKJx' target="_blank" rel="noreferrer" ><SpotifyButton>listen on spotify</SpotifyButton></a>
-            </EngineerExtendedRight>
-          </EngineerExtendedInnerContainer>
-        </EngineerExtendedContainer>
-      )}
+      
 
       {/* BAYEM ENGINEER CARD */}
       <EngineerCard
