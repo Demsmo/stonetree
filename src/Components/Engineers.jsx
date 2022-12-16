@@ -5,8 +5,8 @@ import { useInView } from 'react-intersection-observer'
 import Ques from '../assets/Engineers/ques.jpg'
 import Turner from '../assets/Engineers/Turner.png'
 import Casper from '../assets/Engineers/Casper.jpg'
-import Young from '../assets/Engineers/Young.jpg'
 import Bayem from '../assets/Engineers/Bayem.jpeg'
+import Leo from '../assets/Engineers/Leo.jpeg'
 import { useState } from 'react'
 
 function Engineers() {
@@ -14,8 +14,8 @@ function Engineers() {
   const [openQues, setOpenQues] = useState(false)
   const [openTurner, setOpenTurner] = useState(false)
   const [openCasper, setOpenCasper] = useState(false)
-  const [openYoung, setOpenYoung] = useState(false)
   const [openBayem, setOpenBayem] = useState(false)
+  const [openLeo, setOpenLeo] = useState(false)
 
   const { ref, inView } = useInView({
     threshold: 0.3
@@ -242,7 +242,72 @@ function Engineers() {
           </EngineerExtendedInnerContainer>
         </EngineerExtendedContainer>
       )}
+
+       {/* LEO ENGINEER CARD */}
+       <EngineerCard
+        as={motion.div}
+        whileHover={{ scale: 1.1 }}
+        animate={animation}
+      >
+        <EngineerImg src={Leo} />
+        <EngineerTitle>Leo (Jack)</EngineerTitle>
+        <EngineerDescription>Rap, Hip-Hop, R&B</EngineerDescription>
+        <EngineerButton
+          onClick={() => {
+            setOpenLeo((curr) => !curr);
+          }}
+        >more info</EngineerButton>
+      </EngineerCard>
+      {openLeo && (
+        <EngineerExtendedContainer
+          as={motion.div}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ ease: "easeOut", duration: 1 }}
+        >
+          <Exit
+            onClick={() => {
+              setOpenLeo((curr) => !curr);
+            }}
+          >
+            &#10005;
+          </Exit>
+          <EngineerExtendedInnerContainer>
+            <EngineerExtendedLeft>
+              <EngineerExtendedImg src={Leo} />
+            </EngineerExtendedLeft>
+            <EngineerExtendedRight>
+              <EngineerExtendedTitle>Leo (Jack)</EngineerExtendedTitle>
+              <EngineerExtendedDescription>
+              Leo (Jack) is an aspiring singer/
+              songwriter, recording engineer & <br/>
+              beat producer with a unique ear
+              for compression (both hardware <br/>
+              and software plugins) & 
+              knowledge of how to mix and <br/>
+              master an overall project. He has
+              worked in genres such as R&B, <br/>
+              Hip-Hop, Rap & Pop as well as
+              working in different categories like <br/>
+              voiceovers for commercials and 
+              video games. From his learning <br/>
+              experience graduating from 
+              Azmyth Studios, to his music <br/>
+              composition/theory background,
+              he definitely brings a lot of ideas <br/>
+              and talent to the table. He works
+              diligently to ensure the song <br/>
+              sounds professional, while
+              building a strong collaboration <br/>
+              with the client.
+              </EngineerExtendedDescription>
+              <a href='https://music.youtube.com/playlist?list=PLTKpQQnrq09IOS9p8HrrAJSuY-9xuza77&feature=share' target="_blank" rel="noreferrer" ><SpotifyButton>listen on youtube</SpotifyButton></a>
+            </EngineerExtendedRight>
+          </EngineerExtendedInnerContainer>
+        </EngineerExtendedContainer>
+      )}
     </EngineerContainer>
+    
   )
 }
 

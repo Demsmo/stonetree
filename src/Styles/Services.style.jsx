@@ -64,6 +64,7 @@ export const ServiceExpanded = styled.div`
     height: 100%;
     background: black;
     text-align: center;
+    z-index: 4;
 `
 
 export const ServiceExpandedContainer = styled.div`
@@ -87,12 +88,24 @@ export const Exit = styled.button`
     @media (max-width: 955px) {
         left: 300px;
     }
+
+    /* @media (max-width: 1869px) {
+        left: 1400px;
+    }
+
+    @media (max-width: 1440px) {
+        left: 1200px;
+    }
+
+    @media (max-width: 1240px) {
+        left: 900px;
+    } */
 `
 
 export const ServiceImgExpanded = styled.img`
     height: 300px;
 
-    @media (max-width: 955px) {
+    @media (max-width: 1080px) {
         display: none;
     }
 `
