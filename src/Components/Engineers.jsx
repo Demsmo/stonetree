@@ -84,60 +84,6 @@ function Engineers() {
         </EngineerExtendedContainer>
       )}
 
-      {/* TURNER ENGINEER CARD */}
-      <EngineerCard
-        as={motion.div}
-        whileHover={{ scale: 1.1 }}
-        animate={animation}
-      >
-        <EngineerImg src={Turner} />
-        <EngineerTitle>Turner</EngineerTitle>
-        <EngineerDescription>R&B and Pop</EngineerDescription>
-        <EngineerButton
-          onClick={() => {
-            setOpenTurner((curr) => !curr);
-          }}
-        >more info</EngineerButton>
-      </EngineerCard>
-      {openTurner && (
-        <EngineerExtendedContainer
-          as={motion.div}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ ease: "easeOut", duration: 1 }}
-        >
-          <Exit
-            onClick={() => {
-              setOpenTurner((curr) => !curr);
-            }}
-          >
-            &#10005;
-          </Exit>
-          <EngineerExtendedInnerContainer>
-            <EngineerExtendedLeft>
-              <EngineerExtendedImg src={Turner} />
-            </EngineerExtendedLeft>
-            <EngineerExtendedRight>
-              <EngineerExtendedTitle>Turner</EngineerExtendedTitle>
-              <EngineerExtendedDescription>
-                Turner Dunlop is an engineer, producer, and songwriter <br />
-                specializing in multiple genres from hip hop and R&B to pop and neo-soul. <br />
-                Turner produces, engineers, and advises on artist development for <br />
-                multiple record labels including Spinach Records (based in New York), <br />
-                Absorb (Indianapolis), and Whiskey Pixel Entertainment (Indianapolis). <br />
-                His work has been placed on numerous Spotify editorial playlists and <br />
-                has been featured on the TV Show Keeping Up With The Kardashians. <br />
-                As an engineer, Turner is known for bringing fresh ideas to the table <br />
-                that elevate the final product beyond client expectations. <br />
-                In all aspects of his work, it is Turner’s passion, creativity, <br />
-                and ear for industry standard quality that set him apart.
-              </EngineerExtendedDescription>
-              <a href='https://open.spotify.com/playlist/1lHgXnO2vemQFmBYQmzGjk?si=OrhH3TngS92cM3bG8jBZ0Q&nd=1' target="_blank" rel="noreferrer" ><SpotifyButton>listen on spotify</SpotifyButton></a>
-            </EngineerExtendedRight>
-          </EngineerExtendedInnerContainer>
-        </EngineerExtendedContainer>
-      )}
-
       {/* CASPER ENGINEER CARD */}
       <EngineerCard
         as={motion.div}
