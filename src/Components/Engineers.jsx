@@ -3,19 +3,21 @@ import { EngineerButton, EngineerCard, EngineerContainer, EngineerDescription, E
 import { motion, useAnimation } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import Ques from '../assets/Engineers/ques.jpg'
-import Turner from '../assets/Engineers/Turner.png'
 import Casper from '../assets/Engineers/Casper.jpg'
 import Bayem from '../assets/Engineers/Bayem.jpeg'
 import Leo from '../assets/Engineers/Leo.jpeg'
+import Eddy from '../assets/Engineers/Eddy.jpeg'
+import Don from '../assets/Engineers/Don.jpeg'
 import { useState } from 'react'
 
 function Engineers() {
 
   const [openQues, setOpenQues] = useState(false)
-  const [openTurner, setOpenTurner] = useState(false)
   const [openCasper, setOpenCasper] = useState(false)
   const [openBayem, setOpenBayem] = useState(false)
   const [openLeo, setOpenLeo] = useState(false)
+  const [openEddy, setOpenEddy] = useState(false)
+  const [openDon, setOpenDon] = useState(false)
 
   const { ref, inView } = useInView({
     threshold: 0.3
@@ -252,6 +254,107 @@ function Engineers() {
           </EngineerExtendedInnerContainer>
         </EngineerExtendedContainer>
       )}
+
+      {/* EDDY ENGINEER CARD */}
+       <EngineerCard
+        as={motion.div}
+        whileHover={{ scale: 1.1 }}
+        animate={animation}
+      >
+        <EngineerImg src={Eddy} />
+        <EngineerTitle>Eddy Blake</EngineerTitle>
+        <EngineerDescription>Pop, R&B, Hip-Hop</EngineerDescription>
+        <EngineerButton
+          onClick={() => {
+            setOpenEddy((curr) => !curr);
+          }}
+        >more info</EngineerButton>
+      </EngineerCard>
+      {openEddy && (
+        <EngineerExtendedContainer
+          as={motion.div}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ ease: "easeOut", duration: 1 }}
+        >
+          <Exit
+            onClick={() => {
+              setOpenEddy((curr) => !curr);
+            }}
+          >
+            &#10005;
+          </Exit>
+          <EngineerExtendedInnerContainer>
+            <EngineerExtendedLeft>
+              <EngineerExtendedImg src={Eddy} />
+            </EngineerExtendedLeft>
+            <EngineerExtendedRight>
+              <EngineerExtendedTitle>Eddy Blake</EngineerExtendedTitle>
+              <EngineerExtendedDescription>
+              Eddy Blake is a songwriter and engineer from Indianapolis. <br/>
+              Starting his career as a rapper and transitioning into a Pop and R&B songwriter <br/>
+               has given him a unique perspective on making music that he applies to his engineering too. <br/>
+               He has worked with independent labels and pitched songs to artists on major labels as well, <br/>
+               and he applies the same high standards to himself and his collaborators <br/>
+               no matter whose music he works on to create the best product possible.
+              </EngineerExtendedDescription>
+              <a href='https://soundcloud.com/eddyblakemusic/sets/songs-i-mixed-and-mastered/s-Ez0iSq58EVh?si=1f66f9c4996c469a8f1817840713694d&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing' target="_blank" rel="noreferrer" ><SpotifyButton>listen on soundcloud</SpotifyButton></a>
+            </EngineerExtendedRight>
+          </EngineerExtendedInnerContainer>
+        </EngineerExtendedContainer>
+      )}
+
+      {/* DON ENGINEER CARD */}
+      <EngineerCard
+        as={motion.div}
+        whileHover={{ scale: 1.1 }}
+        animate={animation}
+      >
+        <EngineerImg src={Don} />
+        <EngineerTitle>DonJuan</EngineerTitle>
+        <EngineerDescription>Rap, Hip-Hop</EngineerDescription>
+        <EngineerButton
+          onClick={() => {
+            setOpenDon((curr) => !curr);
+          }}
+        >more info</EngineerButton>
+      </EngineerCard>
+      {openDon && (
+        <EngineerExtendedContainer
+          as={motion.div}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ ease: "easeOut", duration: 1 }}
+        >
+          <Exit
+            onClick={() => {
+              setOpenDon((curr) => !curr);
+            }}
+          >
+            &#10005;
+          </Exit>
+          <EngineerExtendedInnerContainer>
+            <EngineerExtendedLeft>
+              <EngineerExtendedImg src={Don} />
+            </EngineerExtendedLeft>
+            <EngineerExtendedRight>
+              <EngineerExtendedTitle>DonJuan</EngineerExtendedTitle>
+              <EngineerExtendedDescription>
+              DonJuan is a Creative Collaborative self taught audio engineer. <br/>
+              Highly experienced with rap and hip-hop in studio recording. <br/>
+               DonJuan has Digital sound editing skills and trouble shooting <br/>
+               skills along with excellent hearing. He is always open to learning new <br/>
+               things and strives for perfection. He is also an artist, songwriter and producer. <br/>
+               DonJuan has a strong love and passion for music, and it shows in his work. <br/>
+               He has good communication with other artist. <br/>
+               DonJuan has also done commercials and voice over editing for various actors.
+              </EngineerExtendedDescription>
+              <a href='https://open.spotify.com/playlist/2atVrVLKfefzxZSvkzD7Cg?si=wxvR4zFUSSG0_clS7jFm7g' target="_blank" rel="noreferrer" ><SpotifyButton>listen on spotify</SpotifyButton></a>
+            </EngineerExtendedRight>
+          </EngineerExtendedInnerContainer>
+        </EngineerExtendedContainer>
+      )}
+
     </EngineerContainer>
     
   )
