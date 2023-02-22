@@ -10,6 +10,7 @@ export const EngineerContainer = styled.div`
     padding: 20px;
     justify-content: center;
     z-index: 2;
+    /* border: 1px solid white; */
 `
 
 export const EngineerCard = styled.div`

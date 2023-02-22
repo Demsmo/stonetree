@@ -8,6 +8,7 @@ import Bayem from '../assets/Engineers/Bayem.jpeg'
 import Leo from '../assets/Engineers/Leo.jpeg'
 import Eddy from '../assets/Engineers/Eddy.jpeg'
 import Don from '../assets/Engineers/Don.jpeg'
+import Young from '../assets/Engineers/Young.jpg'
 import { useState } from 'react'
 
 function Engineers() {
@@ -18,6 +19,7 @@ function Engineers() {
   const [openLeo, setOpenLeo] = useState(false)
   const [openEddy, setOpenEddy] = useState(false)
   const [openDon, setOpenDon] = useState(false)
+  const [openYoung, setOpenYoung] = useState(false)
 
   const { ref, inView } = useInView({
     threshold: 0.3
@@ -47,7 +49,7 @@ function Engineers() {
       <EngineerCard
         as={motion.div}
         whileHover={{ scale: 1.1 }}
-        animate={animation}
+        // animate={animation}
       >
         <EngineerImg src={Ques} />
         <EngineerTitle>Ques</EngineerTitle>
@@ -90,7 +92,7 @@ function Engineers() {
       <EngineerCard
         as={motion.div}
         whileHover={{ scale: 1.1 }}
-        animate={animation}
+        // animate={animation}
       >
         <EngineerImg src={Casper} />
         <EngineerTitle>Casper</EngineerTitle>
@@ -147,7 +149,7 @@ function Engineers() {
       <EngineerCard
         as={motion.div}
         whileHover={{ scale: 1.1 }}
-        animate={animation}
+        // animate={animation}
       >
         <EngineerImg src={Bayem} />
         <EngineerTitle>Bayem</EngineerTitle>
@@ -195,7 +197,7 @@ function Engineers() {
        <EngineerCard
         as={motion.div}
         whileHover={{ scale: 1.1 }}
-        animate={animation}
+        // animate={animation}
       >
         <EngineerImg src={Leo} />
         <EngineerTitle>Leo (Jack)</EngineerTitle>
@@ -259,7 +261,7 @@ function Engineers() {
        <EngineerCard
         as={motion.div}
         whileHover={{ scale: 1.1 }}
-        animate={animation}
+        // animate={animation}
       >
         <EngineerImg src={Eddy} />
         <EngineerTitle>Eddy Blake</EngineerTitle>
@@ -308,7 +310,7 @@ function Engineers() {
       <EngineerCard
         as={motion.div}
         whileHover={{ scale: 1.1 }}
-        animate={animation}
+        // animate={animation}
       >
         <EngineerImg src={Don} />
         <EngineerTitle>DonJuan</EngineerTitle>
@@ -354,6 +356,55 @@ function Engineers() {
           </EngineerExtendedInnerContainer>
         </EngineerExtendedContainer>
       )}
+
+      {/* YOUNG ENGINEER CARD */}
+      <EngineerCard
+        as={motion.div}
+        whileHover={{ scale: 1.1 }}
+        // animate={animation}
+      >
+        <EngineerImg src={Young} />
+        <EngineerTitle>Young BTW</EngineerTitle>
+        <EngineerDescription>Rap, Hip-Hop</EngineerDescription>
+        <EngineerButton
+          onClick={() => {
+            setOpenYoung((curr) => !curr);
+          }}
+        >more info</EngineerButton>
+      </EngineerCard>
+      {openYoung && (
+        <EngineerExtendedContainer
+          as={motion.div}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ ease: "easeOut", duration: 1 }}
+        >
+          <Exit
+            onClick={() => {
+              setOpenYoung((curr) => !curr);
+            }}
+          >
+            &#10005;
+          </Exit>
+          <EngineerExtendedInnerContainer>
+            <EngineerExtendedLeft>
+              <EngineerExtendedImg src={Young} />
+            </EngineerExtendedLeft>
+            <EngineerExtendedRight>
+              <EngineerExtendedTitle>Young BTW</EngineerExtendedTitle>
+              <EngineerExtendedDescription>
+              My name is Young I have been engineering music for two years. <br />
+              I record with protools I am proficient with autotune. <br /> 
+              I have recorded all genres of music. <br />
+              I my self am an artist and understand the importance of sounding your best. <br /> 
+              If you have any other questions just hit me up! Look forward to working with you! 
+              </EngineerExtendedDescription>
+              <a href='https://open.spotify.com/artist/1cJFQQBpqiVwgwyltMYKJx?si=VtlEG97tR2ui95zx7oFyuQ' target="_blank" rel="noreferrer" ><SpotifyButton>listen on spotify</SpotifyButton></a>
+            </EngineerExtendedRight>
+          </EngineerExtendedInnerContainer>
+        </EngineerExtendedContainer>
+      )}
+
 
     </EngineerContainer>
     
