@@ -264,7 +264,7 @@ function Engineers() {
         // animate={animation}
       >
         <EngineerImg src={Eddy} />
-        <EngineerTitle>Eddy Blake</EngineerTitle>
+        <EngineerTitle>Lee Way</EngineerTitle>
         <EngineerDescription>Pop, R&B, Hip-Hop</EngineerDescription>
         <EngineerButton
           onClick={() => {
@@ -291,9 +291,9 @@ function Engineers() {
               <EngineerExtendedImg src={Eddy} />
             </EngineerExtendedLeft>
             <EngineerExtendedRight>
-              <EngineerExtendedTitle>Eddy Blake</EngineerExtendedTitle>
+              <EngineerExtendedTitle>Lee Way</EngineerExtendedTitle>
               <EngineerExtendedDescription>
-              Eddy Blake is a songwriter and engineer from Indianapolis. <br/>
+              Lee Way is a songwriter and engineer from Indianapolis. <br/>
               Starting his career as a rapper and transitioning into a Pop and R&B songwriter <br/>
                has given him a unique perspective on making music that he applies to his engineering too. <br/>
                He has worked with independent labels and pitched songs to artists on major labels as well, <br/>
