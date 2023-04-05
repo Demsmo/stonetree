@@ -135,7 +135,7 @@ function Engineers() {
                 process from beat-making to cutting verses in the booth to mastering the final mix of a song. <br />
                 His switch to producing in Ableton, engineering in ProTools, learning bass and guitar, and <br />
                 relying on his turn-table and ever growing collection of vinyl allows him to continue to grow in a <br />
-                unique and original way as an artist and musician.
+                unique and original way as an artist and musician. Book by request only lovehardrecords@gmail.com
               </EngineerExtendedDescription>
               <a href='https://open.spotify.com/artist/6KJFzBeIB6WKEmK7uH7zXS?si=iG2I_VuOSPyNeLJeJn2R6g' target="_blank" rel="noreferrer" ><SpotifyButton>listen on spotify</SpotifyButton></a>
             </EngineerExtendedRight>
