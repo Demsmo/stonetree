@@ -3,23 +3,23 @@ import { EngineerButton, EngineerCard, EngineerContainer, EngineerDescription, E
 import { motion, useAnimation } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import Ques from '../assets/Engineers/ques.jpg'
-import Casper from '../assets/Engineers/Casper.jpg'
 import Bayem from '../assets/Engineers/Bayem.jpeg'
 import Leo from '../assets/Engineers/Leo.jpeg'
 import Eddy from '../assets/Engineers/Eddy.jpeg'
 import Don from '../assets/Engineers/Don.jpeg'
 import Young from '../assets/Engineers/Young.jpg'
+import Justin from '../assets/Engineers/Justin.jpeg'
 import { useState } from 'react'
 
 function Engineers() {
 
   const [openQues, setOpenQues] = useState(false)
-  const [openCasper, setOpenCasper] = useState(false)
   const [openBayem, setOpenBayem] = useState(false)
   const [openLeo, setOpenLeo] = useState(false)
   const [openEddy, setOpenEddy] = useState(false)
   const [openDon, setOpenDon] = useState(false)
   const [openYoung, setOpenYoung] = useState(false)
+  const [openJustin, setOpenJustin] =useState(false)
 
   const { ref, inView } = useInView({
     threshold: 0.3
@@ -86,65 +86,8 @@ function Engineers() {
             </EngineerExtendedRight>
           </EngineerExtendedInnerContainer>
         </EngineerExtendedContainer>
-      )}
-
-      {/* CASPER ENGINEER CARD */}
-      <EngineerCard
-        as={motion.div}
-        whileHover={{ scale: 1.1 }}
-        // animate={animation}
-      >
-        <EngineerImg src={Casper} />
-        <EngineerTitle>Casper</EngineerTitle>
-        <EngineerDescription>Hip-Hop, Rap</EngineerDescription>
-        <EngineerButton
-          onClick={() => {
-            setOpenCasper((curr) => !curr);
-          }}
-        >more info</EngineerButton>
-      </EngineerCard>
-      {openCasper && (
-        <EngineerExtendedContainer
-          as={motion.div}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ ease: "easeOut", duration: 1 }}
-        >
-          <Exit
-            onClick={() => {
-              setOpenCasper((curr) => !curr);
-            }}
-          >
-            &#10005;
-          </Exit>
-          <EngineerExtendedInnerContainer>
-            <EngineerExtendedLeft>
-              <EngineerExtendedImg src={Casper} />
-            </EngineerExtendedLeft>
-            <EngineerExtendedRight>
-              <EngineerExtendedTitle>Casper</EngineerExtendedTitle>
-              <EngineerExtendedDescription>
-                The Indianapolis native, Alec “Casper Merci” Surridge, is a producer, songwriter, and <br />
-                engineer. Adopting a do-it-yourself approach to his music, if there is something he hasn’t done <br />
-                before, he’ll learn it. <br />
-                Casper’s career in music began in early high school when he bought his first laptop and <br />
-                began making beats in Logic Pro. His passion and drive have always been solidly rooted in a <br />
-                deep love of hip-hop and rap and it shows in his music. In 2022, Casper graduated from the <br />
-                Music Technology program at IUPUI where he developed his skills as an artist, producer, and <br />
-                engineer. It has been his goal from the beginning to be completely self-sufficient in his creative <br />
-                process from beat-making to cutting verses in the booth to mastering the final mix of a song. <br />
-                His switch to producing in Ableton, engineering in ProTools, learning bass and guitar, and <br />
-                relying on his turn-table and ever growing collection of vinyl allows him to continue to grow in a <br />
-                unique and original way as an artist and musician. Book by request only lovehardrecords@gmail.com
-              </EngineerExtendedDescription>
-              <a href='https://open.spotify.com/artist/6KJFzBeIB6WKEmK7uH7zXS?si=iG2I_VuOSPyNeLJeJn2R6g' target="_blank" rel="noreferrer" ><SpotifyButton>listen on spotify</SpotifyButton></a>
-            </EngineerExtendedRight>
-          </EngineerExtendedInnerContainer>
-        </EngineerExtendedContainer>
-      )}
-
-      
-
+      )}      
+    
       {/* BAYEM ENGINEER CARD */}
       <EngineerCard
         as={motion.div}
@@ -400,6 +343,53 @@ function Engineers() {
               If you have any other questions just hit me up! Look forward to working with you! 
               </EngineerExtendedDescription>
               <a href='https://open.spotify.com/artist/1cJFQQBpqiVwgwyltMYKJx?si=VtlEG97tR2ui95zx7oFyuQ' target="_blank" rel="noreferrer" ><SpotifyButton>listen on spotify</SpotifyButton></a>
+            </EngineerExtendedRight>
+          </EngineerExtendedInnerContainer>
+        </EngineerExtendedContainer>
+      )}
+
+      {/* JUSTIN ENGINEER CARD */}
+      <EngineerCard
+        as={motion.div}
+        whileHover={{ scale: 1.1 }}
+        // animate={animation}
+      >
+        <EngineerImg src={Justin} />
+        <EngineerTitle>Justin Blackwell</EngineerTitle>
+        <EngineerDescription>Metal, Pop-Punk, Alternative</EngineerDescription>
+        <EngineerButton
+          onClick={() => {
+            setOpenJustin((curr) => !curr);
+          }}
+        >more info</EngineerButton>
+      </EngineerCard>
+      {openJustin && (
+        <EngineerExtendedContainer
+          as={motion.div}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ ease: "easeOut", duration: 1 }}
+        >
+          <Exit
+            onClick={() => {
+              setOpenJustin((curr) => !curr);
+            }}
+          >
+            &#10005;
+          </Exit>
+          <EngineerExtendedInnerContainer>
+            <EngineerExtendedLeft>
+              <EngineerExtendedImg src={Justin} />
+            </EngineerExtendedLeft>
+            <EngineerExtendedRight>
+              <EngineerExtendedTitle>Justin Blackwell</EngineerExtendedTitle>
+              <EngineerExtendedDescription>
+              If I were to tell you the story of my life, <br/>
+              it would be mostly about music. <br/>
+              It’s everything to me, everything I do is to serve music. <br/>
+              It’s the only thing I care about.
+              </EngineerExtendedDescription>
+              <a href='https://open.spotify.com/playlist/3waQbuD0DW2DAkXzFJCsMH?si=EsBUbTLLSL2MMVBvKFCZfQ' target="_blank" rel="noreferrer" ><SpotifyButton>listen on spotify</SpotifyButton></a>
             </EngineerExtendedRight>
           </EngineerExtendedInnerContainer>
         </EngineerExtendedContainer>
