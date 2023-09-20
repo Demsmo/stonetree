@@ -405,7 +405,7 @@ function Engineers() {
       >
         <EngineerImg src={Scoob} />
         <EngineerTitle>Scoob Stacks</EngineerTitle>
-        <EngineerDescription>Metal, Pop-Punk, Alternative</EngineerDescription>
+        <EngineerDescription>Rap, Hip-Hop, RnB, Pop</EngineerDescription>
         <EngineerButton
           onClick={() => {
             setOpenScoob((curr) => !curr);
