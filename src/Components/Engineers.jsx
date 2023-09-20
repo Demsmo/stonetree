@@ -5,10 +5,11 @@ import { useInView } from 'react-intersection-observer'
 import Ques from '../assets/Engineers/ques.jpg'
 import Bayem from '../assets/Engineers/Bayem.jpeg'
 import Leo from '../assets/Engineers/Leo.jpeg'
-import Eddy from '../assets/Engineers/Eddy.jpeg'
+import LeeWay from '../assets/Engineers/Eddy.jpeg'
 import Don from '../assets/Engineers/Don.jpeg'
 import Young from '../assets/Engineers/Young.jpg'
 import Justin from '../assets/Engineers/Justin.jpeg'
+import Scoob from '../assets/Engineers/Scoob.jpg'
 import { useState } from 'react'
 
 function Engineers() {
@@ -16,10 +17,11 @@ function Engineers() {
   const [openQues, setOpenQues] = useState(false)
   const [openBayem, setOpenBayem] = useState(false)
   const [openLeo, setOpenLeo] = useState(false)
-  const [openEddy, setOpenEddy] = useState(false)
+  const [openLeeWay, setOpenLeeWay] = useState(false)
   const [openDon, setOpenDon] = useState(false)
   const [openYoung, setOpenYoung] = useState(false)
   const [openJustin, setOpenJustin] =useState(false)
+  const [openScoob, setOpenScoob] = useState(false)
 
   const { ref, inView } = useInView({
     threshold: 0.3
@@ -173,8 +175,8 @@ function Engineers() {
               <EngineerExtendedTitle>Leo (Jack)</EngineerExtendedTitle>
               <EngineerExtendedDescription>
               Leo (Jack) is an aspiring singer/
-              songwriter, recording engineer & <br/>
-              beat producer with a unique ear
+              songwriter, recording engineer  <br/>
+              with a unique ear
               for compression (both hardware <br/>
               and software plugins) & 
               knowledge of how to mix and <br/>
@@ -200,22 +202,22 @@ function Engineers() {
         </EngineerExtendedContainer>
       )}
 
-      {/* EDDY ENGINEER CARD */}
+      {/* LEEWAY ENGINEER CARD */}
        <EngineerCard
         as={motion.div}
         whileHover={{ scale: 1.1 }}
         // animate={animation}
       >
-        <EngineerImg src={Eddy} />
+        <EngineerImg src={LeeWay} />
         <EngineerTitle>Lee Way</EngineerTitle>
         <EngineerDescription>Pop, R&B, Hip-Hop</EngineerDescription>
         <EngineerButton
           onClick={() => {
-            setOpenEddy((curr) => !curr);
+            setOpenLeeWay((curr) => !curr);
           }}
         >more info</EngineerButton>
       </EngineerCard>
-      {openEddy && (
+      {openLeeWay && (
         <EngineerExtendedContainer
           as={motion.div}
           initial={{ opacity: 0 }}
@@ -224,14 +226,14 @@ function Engineers() {
         >
           <Exit
             onClick={() => {
-              setOpenEddy((curr) => !curr);
+              setOpenLeeWay((curr) => !curr);
             }}
           >
             &#10005;
           </Exit>
           <EngineerExtendedInnerContainer>
             <EngineerExtendedLeft>
-              <EngineerExtendedImg src={Eddy} />
+              <EngineerExtendedImg src={LeeWay} />
             </EngineerExtendedLeft>
             <EngineerExtendedRight>
               <EngineerExtendedTitle>Lee Way</EngineerExtendedTitle>
@@ -394,7 +396,69 @@ function Engineers() {
           </EngineerExtendedInnerContainer>
         </EngineerExtendedContainer>
       )}
-
+    
+      {/* SCOOB ENGINEER CARD */}
+      <EngineerCard
+        as={motion.div}
+        whileHover={{ scale: 1.1 }}
+        // animate={animation}
+      >
+        <EngineerImg src={Scoob} />
+        <EngineerTitle>Scoob Stacks</EngineerTitle>
+        <EngineerDescription>Metal, Pop-Punk, Alternative</EngineerDescription>
+        <EngineerButton
+          onClick={() => {
+            setOpenScoob((curr) => !curr);
+          }}
+        >more info</EngineerButton>
+      </EngineerCard>
+      {openScoob && (
+        <EngineerExtendedContainer
+          as={motion.div}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ ease: "easeOut", duration: 1 }}
+        >
+          <Exit
+            onClick={() => {
+              setOpenScoob((curr) => !curr);
+            }}
+          >
+            &#10005;
+          </Exit>
+          <EngineerExtendedInnerContainer>
+            <EngineerExtendedLeft>
+              <EngineerExtendedImg src={Scoob} />
+            </EngineerExtendedLeft>
+            <EngineerExtendedRight>
+              <EngineerExtendedTitle>Scoob Stacks</EngineerExtendedTitle>
+              <EngineerExtendedDescription>
+                With a lifelong passion for music <br />
+                that began at the young age of 3, <br/>
+                Scoob Stacks has cultivated an impressive 16-year  <br />
+                journey in the music industry producing, <br />
+                audio engineering, & dj’ing. Growing up in the church playing drums, <br />
+                piano & guitar helps display Scoob’s versatility shines through his <br /> 
+                diverse range of production skills, <br />
+                specializing in Rap, Hip Hop, R&B, Pop, and even has a small but <br />
+                significant experience in rock/metal under his belt. <br />
+                His commitment to musical excellence has earned him noteworthy production  <br />
+                credits all around the country with <br />
+                renowned artists such as Gucci Mane, Blue Bucks Clan, Icewear Vezzo, <br />
+                Bino Rideaux, GrindHardE, Big Sad 1900, <br />
+                FMB DZ, Cuban Doll, and many  more. Scoob's talent goes beyond just music. <br />
+                He's collaborated with esteemed organizations like the Indianapolis Colts, <br /> 
+                BET Network, Indy500 Fest, and FOX59, <br />
+                solidifying his status as an all around creative force.  <br />
+                Follow Scoob Stacks as he continues to capture listeners <br />
+                with his innovative production & a boundless ambition for <br />
+                creating music that resonates with listeners across the world.
+              </EngineerExtendedDescription>
+              <a href='https://open.spotify.com/artist/7Leh82sTig3DlAZ4Ppk1GC?si=pmIU2R7YQc6Q9kb5MZznhA' target="_blank" rel="noreferrer" ><SpotifyButton>listen on spotify</SpotifyButton></a>
+            </EngineerExtendedRight>
+          </EngineerExtendedInnerContainer>
+        </EngineerExtendedContainer>
+      )}
 
     </EngineerContainer>
     

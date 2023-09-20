@@ -110,7 +110,7 @@ export const EngineerExtendedTitle = styled.h1`
 
 export const EngineerExtendedDescription = styled.h1`
     color: white;
-    font-size: 35px;
+    font-size: 25px;
 
     @media (max-width: 955px) {
         font-size: 15px;
