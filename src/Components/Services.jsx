@@ -129,11 +129,8 @@ function Services() {
             <ServiceInfoExpanded>
               studio c is a 800 sq ft, <br />
               sound treated reahearsal space <br />
-              rent by the hour @ $35/hr <br />
-              or sign up for our membership <br />
-              @ $150 per month! <br />
-              studio c can be used for <br />
-              rehearsals, and small events.
+              rent by the hour @ $40/hr <br />
+              (Contact us if you would like to use studio c for events!)
             </ServiceInfoExpanded>
             </ServiceExpandedRight>
             </ServiceExpandedContainer>
